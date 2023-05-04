@@ -1,10 +1,11 @@
-create database QLKhachSan;
+create database QLKhachSan;	
+use QLKhachSan;
 create table KhachHang(
     CMND varchar(10), --PK
-    DiaChi nvarchar(50),
-    Email VARCHAR(30),
+    DiaChiKH nvarchar(50),
+    EmailKH VARCHAR(30),
     HoTenKH NVARCHAR(30),
-    NgaySinh date,
+    NgaySinhKH date,
     SdtKH char(10),
     SoFAX char(10),
 
@@ -17,7 +18,9 @@ create table NhanVien(
     MaNV varchar(6),--PK
     Loai int,
     HoTenNV nvarchar(30),
-
+	DiaChiNV nvarchar(50),
+	EmailNV VARCHAR(30),
+	SdtNV char(10),
     constraint pk_nhanvien
     primary key (MaNV)
 
@@ -25,10 +28,11 @@ create table NhanVien(
 
 create table Phong(
     MaPhong varchar(6),--PK
-    LoaiPhong int, --toi da bao nhieu nguoi
-    TrangThai nvarchar(10), --'co nguoi', 'chua don', 'da dat', 'san sang'
-    GiaPhong float
-
+    LoaiPhong int,
+    TrangThaiDat varchar(10), --'co nguoi', 'chua don', 'da dat', 'san sang'
+    GiaPhong float,
+	TrangThaiVS varchar(10),
+	SoLuongNguoi int,
     constraint pk_phong
     PRIMARY key (MaPhong)
 );
@@ -36,7 +40,7 @@ create table Phong(
 create table Doan(
     MaDoan varchar(6), --PK
     TenDoan nvarchar(30),
-    NguoiDaiDien varchar(6),--FK
+    NguoiDaiDien varchar(10),--FK
     SoLuong int
 
     constraint pk_doan
@@ -49,48 +53,52 @@ create table DichVu(
     LoaiDV int,
     TenDichVu varchar(30),
     GiaDV float,
+	KhuyenMai int,
     Mota nvarchar(30),
 
     constraint pk_dichvu
     primary key (MaDV)
 );
 
-create table Phieuvanchuyenhanhly(
-    MaPhieuVC varchar(6),--PK
-    MaNV varchar(6), --FK
-    CMND varchar(10), --FK
-    SoHanhLy int,
-    MaPhong varchar(6) --FK
-
-    constraint pk_phieuvanchuyen
-    primary key(MaPhieuVC)
+create table ThanhToan(
+	MaTT varchar(6),
+	CMND varchar(10),
+	MaNV varchar(6),
+	NgayTT date,
+	SoTienTT int,
+	PhuongThucTT varchar(10)
+	
+	constraint pk_ThanhToan
+	primary key (MaTT)
 );
 
-
-create table PhieuCheckIn(
-    MaPCI varchar(6),--PK
+create table PhieuDangKyCheckIn(
+    MAPDKC varchar(6),--PK
 
     CMND varchar(10),--FK
     MaNV varchar(6),--FK
     Yeucau nvarchar(100),
     NgayNhanPhong date,
-    HinhThucThanhToan varchar(4), --'cash' or 'card' or 'bank'
+    VanChuyen int, --1: co, 0: khong van chuyen
 
     MaDP varchar(6),--FK
-    constraint pk_phieucheckin
-    primary key (MaPCI)
+    constraint pk_PhieuDangKyCheckIn
+    primary key (MAPDKC)
 );
 
 create table DVPhong(
-    MaPhong varchar(6),--FK
-    MaDV varchar(6)--FK
-);
+    MaPhong varchar(6),--pK
+    MaDV varchar(6)--pK
 
+	constraint pk_DVPhong
+	primary key (MaPhong,MaDV)
+);
 create table PhieuDangKyDichVu (
     MAPDKDV varchar(6),--PK
     CMND varchar(10),--FK
     MaNV varchar(6),--FK
-    TongTien float
+    PhiTamThoi float,
+	NgayDangKy date
 
     constraint pk_phieudkdichvu
     PRIMARY key (MAPDKDV)
@@ -99,35 +107,40 @@ create table PhieuDangKyDichVu (
 create table ChiTietDichVuDangKy(
     MAPDKDV varchar(6),--FK
     MaDV varchar(6),--FK
+	GiaDV int
+
+	constraint pk_ChiTietDichVuDangKy
+    PRIMARY key (MAPDKDV,MaDV)
 );
 
-create table PhieuCheckOut (
-    MaPCO varchar(6),--PK
+create table TraPhong (
+    MATP varchar(6),--PK
     MaPhong varchar(6),--FK
     TinhTrangPhong nvarchar (50),
     NgayTraPhong date,
-    
+    MaNV varchar(6),
+
     DanhGia nvarchar(50),
     MaPCI varchar(6),--FK
     CMND varchar(10), --FK
-    PhiPhatSinh float
+	TongTien float
 
-    constraint pk_phieucheckout
-    primary key (MaPCO)
+    constraint pk_TraPhong
+    primary key (MATP)
 );
 
 create table DatPhong (
     MaDP varchar(6),--PK
     MaPhong varchar(6),--FK
     CMND varchar(10),--FK
-    NgayDen date,
+	MaNV varchar(6),
+	BaoGia int,
+    NgayDP date,
     SoDemLuuTru int,
-    LoaiPhong int,
-    YeuCau nvarchar(100),
+    YeuCauDatBiet nvarchar(100),
     MaDoan varchar(6),--FK
-    SoLuong int,
-    TienCoc float,
-    Gia float
+    SoLuongNguoi int,
+    TienCoc int,
 
     constraint pk_datphong
     PRIMARY key (MaDP)
@@ -137,10 +150,9 @@ create table HoaDon (
     MaHD varchar(6),--PK
     CMND varchar(10),--FK
     MaNV varchar(6),--FK
-    TenKhachHang nvarchar(30),
     TienThanhToan float,
     MaDP varchar(6),--FK
-    MaPCO varchar(6),--FK
+    MATP varchar(6),--FK
     MAPDKDV varchar(6) --FK
 
     constraint pk_hoadon
@@ -151,94 +163,118 @@ add
     constraint fk_khachhang_doan
     FOREIGN key (MaDoan) REFERENCES Doan
 
-alter table Phieuvanchuyenhanhly
+alter table Doan
 add 
-    CONSTRAINT fk_phieuvanchuyen_nhanvien 
-    FOREIGN key (MaNV) REFERENCES NhanVien,
+    constraint fk_doan_khachhang
+    FOREIGN key (NguoiDaiDien) REFERENCES KhachHang
 
-    CONSTRAINT fk_phieuvanchuyen_khachhang
+alter table ThanhToan
+add 
+    constraint fk_thanhtoan_khachhang
     FOREIGN key (CMND) REFERENCES KhachHang,
 
-    CONSTRAINT fk_phieuvanchuyen_phong 
-    FOREIGN key (MaPhong) REFERENCES Phong
+    constraint fk_thanhtoan_nhanvien
+    FOREIGN key (MANV) REFERENCES NhanVien
 
-
-alter table PhieuCheckIn
+alter table PhieuDangKyCheckIn
 add 
-    constraint fk_phieucheckin_nhanvien
-    FOREIGN key (MaNV) REFERENCES NhanVien,
-
-    constraint fk_phieucheckin_khachhang
+    constraint fk_CI_khachhang
     FOREIGN key (CMND) REFERENCES KhachHang,
 
-    constraint fk_phieucheckin_datphong
-    foreign key (MaDP) REFERENCES DatPhong
+    constraint fk_CI_nhanvien
+    FOREIGN key (MANV) REFERENCES NhanVien,
+
+    constraint fk_CI_datphong
+    FOREIGN key (MaDP) REFERENCES DatPhong
 
 alter table DVPhong
 add 
-    constraint fk_dvphong_phong
-    FOREIGN key (MaPhong) REFERENCES Phong,
+    constraint fk_DVPhong_phong
+    FOREIGN key (MaPhong) REFERENCES phong,
 
-    constraint fk_dvphong_dichvu
+    constraint fk_CI_dichvu
     FOREIGN key (MaDV) REFERENCES DichVu
 
 alter table PhieuDangKyDichVu
 add 
-    constraint fk_pdkdv_nhanvien
+    constraint fk_PhieuDangKyDichVu_nhanvien
     FOREIGN key (MaNV) REFERENCES NhanVien,
 
-    constraint fk_pdkdv_khachhang
+    constraint fk_PhieuDangKyDichVu_khachhang
     FOREIGN key (CMND) REFERENCES KhachHang
-
 
 alter table ChiTietDichVuDangKy
 add 
-    constraint fk_chitietdichvudangky_pdkdv
-    FOREIGN key (MAPDKDV) REFERENCES PhieuDangKyDichVu,
-
-    constraint fk_chitietdichvudangky_dichvu
+    constraint fk_ChiTietDichVuDangKy_dichvu
     FOREIGN key (MaDV) REFERENCES DichVu
 
-alter table PhieuCheckOut
-add     
-    constraint fk_pco_pci
-    FOREIGN key (MaPCI) REFERENCES PhieuCheckIn,
-
-    constraint fk_pco_khachhang
-    FOREIGN key (CMND) REFERENCES KhachHang,
-
-    constraint fk_pco_phong
-    FOREIGN key (MaPhong) REFERENCES Phong
-
-alter table DatPhong
-add
-    constraint fk_datphong_phong
+alter table TraPhong
+add 
+    constraint fk_TraPhong_phong
     FOREIGN key (MaPhong) REFERENCES Phong,
 
-    constraint fk_datphong_khachhang
+    constraint fk_TraPhong_khachhang
     FOREIGN key (CMND) REFERENCES KhachHang,
 
-    constraint fk_datphong_doan
+	constraint fk_TraPhong_nhanvien
+    FOREIGN key (MaNV) REFERENCES NhanVien,
+
+	constraint fk_TraPhong_PhieuDangKyCheckIn
+    FOREIGN key (MaPCI) REFERENCES PhieuDangKyCheckIn
+
+
+alter table DatPhong
+add 
+    constraint fk_DatPhong_phong
+    FOREIGN key (MaPhong) REFERENCES Phong,
+
+    constraint fk_chitietdichvudangky_khachhang
+    FOREIGN key (CMND) REFERENCES KhachHang,
+
+    constraint fk_chitietdichvudangky_nhanvien
+    FOREIGN key (MaNV) REFERENCES NhanVien,
+
+    constraint fk_chitietdichvudangky_doan
     FOREIGN key (MaDoan) REFERENCES Doan
 
 alter table HoaDon
-add
-    constraint fk_hoadon_datphong
-    FOREIGN key (MaDP) REFERENCES DatPhong,
+add 
+    constraint fk_HoaDon_PhieuDangKyDichVu
+    FOREIGN key (MAPDKDV) REFERENCES PhieuDangKyDichVu,
 
-    constraint fk_hoadon_khachhang
+    constraint fk_HoaDon_khachhang
     FOREIGN key (CMND) REFERENCES KhachHang,
 
-    CONSTRAINT fk_hoadon_pco
-    foreign key (MaPCO) REFERENCES PhieuCheckOut,
-
-    constraint fk_hoadon_nhanvien
+    constraint fk_HoaDon_nhanvien
     FOREIGN key (MaNV) REFERENCES NhanVien,
 
-    CONSTRAINT fk_hoadon_phieudangkydichvu
-    FOREIGN key (MAPDKDV) REFERENCES PhieuDangKyDichVu
+    constraint fk_chitietdichvudangky_datphong
+    FOREIGN key (MaDP) REFERENCES DatPhong,
 
-alter table ChiTietDoan
-add 
-    constraint fk_chitietdoan_doan
-    foreign key (MaDoan) REFERENCES Doan
+    constraint fk_chitietdichvudangky_TraPhong
+    FOREIGN key (MATP) REFERENCES TraPhong
+
+--Tu Sinh Ma KhachHang ( chưa hoàn thành)
+drop function KhachHang_MaPhong
+
+create function KhachHang_MaPhong()
+returns varchar(6)
+as
+begin
+	declare @ma_next varchar(6)
+	declare @max int
+
+	select @max=count(MaPhong) from Phong where MaPhong like 'PH'
+	set @ma_next='PH' + RIGHT('0' + cast (@max as varchar(4)),4)
+
+	while(exists(select MaPhong from Phong where MaPhong=@ma_next))
+	begin
+		set @max=@max+1
+		set @ma_next='PH' + RIGHT('0' + cast (@max as varchar(6)),1)
+	end
+	return @ma_next
+end;
+
+declare @temp varchar(6)
+exec @temp = dbo.KhachHang_MaPhong
+print @temp
