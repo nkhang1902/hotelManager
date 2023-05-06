@@ -1,4 +1,4 @@
-create database QLKhachSan;	
+﻿create database QLKhachSan;	
 use QLKhachSan;
 create table KhachHang(
     CMND varchar(10),
@@ -20,7 +20,7 @@ create table KhachDat(
     KhungGio date,
 
     constraint pk_khachdat
-    primary key (CMND,MaPhongDat)
+    primary key (CMND,MaPhongDat,KhungGio)
 );
 
 create table NhanVien(
@@ -266,3 +266,8 @@ add
     constraint fk_KhachDat_Phong
     FOREIGN key (MaPhongDat) REFERENCES Phong(MaPhong);
 
+	INSERT INTO KhachHang(CMND, HoTenKH, EmailKH, SdtKH) VALUES ('43258671', 'Bao Khanh', 'bkhanh@gmail.com', '093233123');
+	INSERT INTO KhachHang(CMND, HoTenKH, EmailKH, SdtKH) VALUES ('12345678', 'Nhat Khang', 'nkhang@gmail.com', '037819202');
+	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (103,'Vip',4,'0','129.99','0');
+	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (302,'Thuong',4,'0','129.99','0');
+	INSERT INTO KhachDat(CMND,MaPhongDat,KhungGio) VALUES ('43258671', 102, '2002-02-19');
