@@ -1,0 +1,11 @@
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\bin\Debug\QuanLyKhachHang.exe.config
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\bin\Debug\QuanLyKhachHang.exe
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\bin\Debug\QuanLyKhachHang.pdb
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\obj\Debug\QuanLyKhachHang.Properties.Resources.resources
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\obj\Debug\QuanLyKhachHang.csproj.GenerateResource.cache
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\obj\Debug\QuanLyKhachHang.csproj.CoreCompileInputs.cache
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\obj\Debug\QuanLyKhachHang.exe
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\obj\Debug\QuanLyKhachHang.pdb
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\obj\Debug\QuanLyKhachHang.csproj.AssemblyReference.cache
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\obj\Debug\QuanLyKhachHang.ChinhSuaThongTin.resources
+D:\HK3\PTTK\Project\ThemKhachHang\QuanLyKhachHang\obj\Debug\QuanLyKhachHang.QuanLyKhachHang.resources
