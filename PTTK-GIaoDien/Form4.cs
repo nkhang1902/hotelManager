@@ -50,7 +50,7 @@ namespace PTTK_GIaoDien
             }
             else
             {
-                string sql = " select * from Phong where LoaiPhong = '" + guna2ComboBox1.Text + "'";
+                string sql = " select * from Phong where LoaiPhong = '" + guna2ComboBox1.Text + "' and TrangThaiDat ='0'";
                 string check = Connection.GetFieldValues(sql);
                 if (check == "")
                 {
@@ -90,6 +90,54 @@ namespace PTTK_GIaoDien
         private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            if(textBox7.Text =="")
+            {
+                MessageBox.Show("Vui điền vào cmnd");
+            }
+            else
+            {
+                Connection.Connect();
+                string sql = " select * from DatPhong where CMND = '" + textBox7.Text + "'";
+                dataGridView2.DataSource = Connection.GetDataToTable(sql);
+                Connection.Disconnect();
+            }
+                
+                
+
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+
+            i = dataGridView2.CurrentRow.Index;
+            textBox9.Text = dataGridView2.Rows[i].Cells[0].Value.ToString(); // mã DatPhòng
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            Connection.Connect();
+            if (textBox7.Text == "")
+            {
+                MessageBox.Show("Vui điền vào mã hủy đặt phòng");
+            }
+            else {
+                string sql = "delete DatPhong where MADP = '" + textBox9.Text + "'";
+                Connection.RunSQL(sql);
+                sql = "UPDATE Phong SET TrangThaiDat = 0 WHERE MaPhong = (select MaPhong from DatPhong where MaDP = '" + textBox9.Text + "'); ";
+                MessageBox.Show("Hủy đặt phòng thành công");
+            }
+            
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

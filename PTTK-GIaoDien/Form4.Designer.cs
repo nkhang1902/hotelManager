@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -52,10 +52,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -72,8 +72,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.guna2NumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -98,7 +96,6 @@
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -118,6 +115,8 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel12);
+            this.guna2GradientPanel1.Controls.Add(this.textBox9);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel19);
             this.guna2GradientPanel1.Controls.Add(this.textBox8);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel18);
@@ -134,8 +133,6 @@
             this.guna2GradientPanel1.Controls.Add(this.textBox3);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel6);
             this.guna2GradientPanel1.Controls.Add(this.textBox1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2NumericUpDown2);
-            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel12);
             this.guna2GradientPanel1.Controls.Add(this.guna2NumericUpDown1);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel9);
             this.guna2GradientPanel1.Controls.Add(this.guna2DateTimePicker2);
@@ -143,12 +140,29 @@
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel5);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2GradientPanel1.CustomizableEdges = customizableEdges9;
+            this.guna2GradientPanel1.CustomizableEdges = customizableEdges7;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(167, 81);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            this.guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(753, 159);
             this.guna2GradientPanel1.TabIndex = 20;
+            // 
+            // guna2HtmlLabel12
+            // 
+            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Gray;
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(536, 57);
+            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(101, 17);
+            this.guna2HtmlLabel12.TabIndex = 54;
+            this.guna2HtmlLabel12.Text = "Mã phòng hủy đặt";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(647, 53);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 23);
+            this.textBox9.TabIndex = 53;
             // 
             // guna2HtmlLabel19
             // 
@@ -287,35 +301,14 @@
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 36;
             // 
-            // guna2NumericUpDown2
-            // 
-            this.guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown2.CustomizableEdges = customizableEdges1;
-            this.guna2NumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2NumericUpDown2.Location = new System.Drawing.Point(552, 43);
-            this.guna2NumericUpDown2.Name = "guna2NumericUpDown2";
-            this.guna2NumericUpDown2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            this.guna2NumericUpDown2.Size = new System.Drawing.Size(100, 36);
-            this.guna2NumericUpDown2.TabIndex = 14;
-            // 
-            // guna2HtmlLabel12
-            // 
-            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(552, 18);
-            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(78, 17);
-            this.guna2HtmlLabel12.TabIndex = 15;
-            this.guna2HtmlLabel12.Text = "Mã Nhân Viên";
-            // 
             // guna2NumericUpDown1
             // 
             this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.CustomizableEdges = customizableEdges3;
+            this.guna2NumericUpDown1.CustomizableEdges = customizableEdges1;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2NumericUpDown1.Location = new System.Drawing.Point(390, 40);
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.guna2NumericUpDown1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.guna2NumericUpDown1.Size = new System.Drawing.Size(100, 36);
             this.guna2NumericUpDown1.TabIndex = 6;
             // 
@@ -333,7 +326,7 @@
             // 
             this.guna2DateTimePicker2.Checked = true;
             this.guna2DateTimePicker2.CustomFormat = "yyyy-MM-dd";
-            this.guna2DateTimePicker2.CustomizableEdges = customizableEdges5;
+            this.guna2DateTimePicker2.CustomizableEdges = customizableEdges3;
             this.guna2DateTimePicker2.FillColor = System.Drawing.SystemColors.Control;
             this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -341,7 +334,7 @@
             this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            this.guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             this.guna2DateTimePicker2.Size = new System.Drawing.Size(160, 31);
             this.guna2DateTimePicker2.TabIndex = 10;
             this.guna2DateTimePicker2.Value = new System.DateTime(2023, 4, 8, 17, 30, 23, 876);
@@ -350,7 +343,7 @@
             // 
             this.guna2DateTimePicker1.Checked = true;
             this.guna2DateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.guna2DateTimePicker1.CustomizableEdges = customizableEdges7;
+            this.guna2DateTimePicker1.CustomizableEdges = customizableEdges5;
             this.guna2DateTimePicker1.FillColor = System.Drawing.SystemColors.Control;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -358,7 +351,7 @@
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            this.guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(160, 31);
             this.guna2DateTimePicker1.TabIndex = 9;
             this.guna2DateTimePicker1.Value = new System.DateTime(2023, 4, 30, 0, 0, 0, 0);
@@ -395,7 +388,7 @@
             // 
             // guna2Button6
             // 
-            this.guna2Button6.CustomizableEdges = customizableEdges11;
+            this.guna2Button6.CustomizableEdges = customizableEdges9;
             this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -405,7 +398,7 @@
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.Location = new System.Drawing.Point(168, 514);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            this.guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.guna2Button6.Size = new System.Drawing.Size(124, 31);
             this.guna2Button6.TabIndex = 12;
             this.guna2Button6.Text = "Đặt Phòng";
@@ -417,7 +410,7 @@
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(41, 69);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            this.guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges11;
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(64, 64);
             this.guna2CirclePictureBox1.TabIndex = 0;
@@ -428,10 +421,10 @@
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel11);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel10);
             this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2Panel1.CustomizableEdges = customizableEdges14;
+            this.guna2Panel1.CustomizableEdges = customizableEdges12;
             this.guna2Panel1.Location = new System.Drawing.Point(12, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges13;
             this.guna2Panel1.Size = new System.Drawing.Size(146, 195);
             this.guna2Panel1.TabIndex = 2;
             // 
@@ -479,7 +472,7 @@
             // 
             // guna2Button9
             // 
-            this.guna2Button9.CustomizableEdges = customizableEdges16;
+            this.guna2Button9.CustomizableEdges = customizableEdges14;
             this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -489,14 +482,15 @@
             this.guna2Button9.ForeColor = System.Drawing.Color.White;
             this.guna2Button9.Location = new System.Drawing.Point(349, 514);
             this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            this.guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges15;
             this.guna2Button9.Size = new System.Drawing.Size(126, 31);
             this.guna2Button9.TabIndex = 25;
             this.guna2Button9.Text = "Xóa";
+            this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
             // 
             // guna2Button10
             // 
-            this.guna2Button10.CustomizableEdges = customizableEdges18;
+            this.guna2Button10.CustomizableEdges = customizableEdges16;
             this.guna2Button10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -504,12 +498,13 @@
             this.guna2Button10.FillColor = System.Drawing.Color.Silver;
             this.guna2Button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button10.ForeColor = System.Drawing.Color.White;
-            this.guna2Button10.Location = new System.Drawing.Point(703, 514);
+            this.guna2Button10.Location = new System.Drawing.Point(535, 514);
             this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            this.guna2Button10.ShadowDecoration.CustomizableEdges = customizableEdges17;
             this.guna2Button10.Size = new System.Drawing.Size(214, 31);
             this.guna2Button10.TabIndex = 26;
             this.guna2Button10.Text = "Kiểm Tra Phòng Đã Đặt";
+            this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
             // 
             // dataGridView1
             // 
@@ -527,8 +522,9 @@
             this.dataGridView2.Location = new System.Drawing.Point(167, 577);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(750, 119);
+            this.dataGridView2.Size = new System.Drawing.Size(750, 155);
             this.dataGridView2.TabIndex = 28;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // guna2HtmlLabel7
             // 
@@ -542,7 +538,7 @@
             // 
             // guna2Button1
             // 
-            this.guna2Button1.CustomizableEdges = customizableEdges20;
+            this.guna2Button1.CustomizableEdges = customizableEdges18;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -550,12 +546,13 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Silver;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(520, 514);
+            this.guna2Button1.Location = new System.Drawing.Point(780, 514);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            this.guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges19;
             this.guna2Button1.Size = new System.Drawing.Size(137, 31);
             this.guna2Button1.TabIndex = 35;
-            this.guna2Button1.Text = "Exit";
+            this.guna2Button1.Text = "Thoát";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2HtmlLabel8
             // 
@@ -570,7 +567,7 @@
             // guna2ComboBox1
             // 
             this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.CustomizableEdges = customizableEdges22;
+            this.guna2ComboBox1.CustomizableEdges = customizableEdges20;
             this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -584,14 +581,14 @@
             "Biệt thự"});
             this.guna2ComboBox1.Location = new System.Drawing.Point(304, 39);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            this.guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges21;
             this.guna2ComboBox1.Size = new System.Drawing.Size(140, 36);
             this.guna2ComboBox1.TabIndex = 44;
             this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // guna2Button2
             // 
-            this.guna2Button2.CustomizableEdges = customizableEdges24;
+            this.guna2Button2.CustomizableEdges = customizableEdges22;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -602,7 +599,7 @@
             this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
             this.guna2Button2.Location = new System.Drawing.Point(777, 39);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges25;
+            this.guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges23;
             this.guna2Button2.Size = new System.Drawing.Size(124, 31);
             this.guna2Button2.TabIndex = 45;
             this.guna2Button2.Text = "Search";
@@ -612,7 +609,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 705);
+            this.ClientSize = new System.Drawing.Size(991, 744);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.guna2HtmlLabel8);
@@ -630,7 +627,6 @@
             this.Text = "Form4";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
@@ -645,8 +641,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
@@ -670,8 +664,6 @@
         private TextBox textBox3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private TextBox textBox1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
@@ -686,5 +678,9 @@
         private TextBox textBox7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
         private TextBox textBox8;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private TextBox textBox9;
     }
 }
