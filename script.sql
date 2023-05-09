@@ -307,7 +307,7 @@ add
 	insert into DVPhong(MaPhong,MaDV) values(201,1)
 	insert into DVPhong(MaPhong,MaDV) values(201,2)
 	insert into DVPhong(MaPhong,MaDV) values(201,3)
-
+	insert into DVPhong(MaPhong,MaDV) values(302,1)
 	
 
 
