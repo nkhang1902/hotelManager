@@ -322,3 +322,24 @@ add
 	insert into DatPhong(MaDP,MaPhong,CMND,MaNV, BaoGia,NgayDP,SoDemLuuTru,YeuCauDatBiet,MaDoan,SoLuongNguoi,TienCoc) values (2,302,'8888888888',1,260,'2022-11-30',2,null,null,1,100)
 
 	SET IDENTITY_INSERT DatPhong OFF
+	
+	
+	--function create ma phieu check in va phieu dang ky dich vu
+	CREATE FUNCTION dbo.TaoMaPDKCheckIn()
+RETURNS INT
+AS
+BEGIN
+    DECLARE @maxID INT
+    SELECT @maxID = MAX(MAPDKC) FROM PhieuDangKyCheckIn
+    RETURN ISNULL(@maxID, 0) + 1
+END
+
+
+CREATE FUNCTION dbo.TaoMaPDKDichVu()
+RETURNS INT
+AS
+BEGIN
+    DECLARE @maxID INT
+    SELECT @maxID = MAX(MAPDKDV) FROM PhieuDangKyDichVu
+    RETURN ISNULL(@maxID, 0) + 1
+END
