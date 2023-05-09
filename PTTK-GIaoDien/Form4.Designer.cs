@@ -39,8 +39,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -56,6 +56,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -114,6 +118,10 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel19);
+            this.guna2GradientPanel1.Controls.Add(this.textBox8);
+            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel18);
+            this.guna2GradientPanel1.Controls.Add(this.textBox7);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel17);
             this.guna2GradientPanel1.Controls.Add(this.textBox6);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel16);
@@ -141,6 +149,40 @@
             this.guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(753, 159);
             this.guna2GradientPanel1.TabIndex = 20;
+            // 
+            // guna2HtmlLabel19
+            // 
+            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel19.ForeColor = System.Drawing.Color.Gray;
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(419, 137);
+            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
+            this.guna2HtmlLabel19.Size = new System.Drawing.Size(51, 17);
+            this.guna2HtmlLabel19.TabIndex = 51;
+            this.guna2HtmlLabel19.Text = "Mã Đoàn";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(499, 133);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 23);
+            this.textBox8.TabIndex = 52;
+            // 
+            // guna2HtmlLabel18
+            // 
+            this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel18.ForeColor = System.Drawing.Color.Gray;
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(605, 137);
+            this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
+            this.guna2HtmlLabel18.Size = new System.Drawing.Size(39, 17);
+            this.guna2HtmlLabel18.TabIndex = 49;
+            this.guna2HtmlLabel18.Text = "CMND";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(647, 133);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 23);
+            this.textBox7.TabIndex = 50;
             // 
             // guna2HtmlLabel17
             // 
@@ -290,10 +332,11 @@
             // guna2DateTimePicker2
             // 
             this.guna2DateTimePicker2.Checked = true;
+            this.guna2DateTimePicker2.CustomFormat = "yyyy-MM-dd";
             this.guna2DateTimePicker2.CustomizableEdges = customizableEdges5;
             this.guna2DateTimePicker2.FillColor = System.Drawing.SystemColors.Control;
             this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.guna2DateTimePicker2.Location = new System.Drawing.Point(180, 43);
             this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -306,10 +349,11 @@
             // guna2DateTimePicker1
             // 
             this.guna2DateTimePicker1.Checked = true;
+            this.guna2DateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.guna2DateTimePicker1.CustomizableEdges = customizableEdges7;
             this.guna2DateTimePicker1.FillColor = System.Drawing.SystemColors.Control;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.guna2DateTimePicker1.Location = new System.Drawing.Point(1, 43);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -317,7 +361,8 @@
             this.guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(160, 31);
             this.guna2DateTimePicker1.TabIndex = 9;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 4, 8, 17, 30, 23, 876);
+            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 4, 30, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
             // 
             // guna2HtmlLabel5
             // 
@@ -358,13 +403,12 @@
             this.guna2Button6.FillColor = System.Drawing.Color.Silver;
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
-            this.guna2Button6.Location = new System.Drawing.Point(189, 512);
+            this.guna2Button6.Location = new System.Drawing.Point(168, 514);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges12;
             this.guna2Button6.Size = new System.Drawing.Size(124, 31);
             this.guna2Button6.TabIndex = 12;
-            this.guna2Button6.Text = "Search";
+            this.guna2Button6.Text = "Đặt Phòng";
             this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // guna2CirclePictureBox1
@@ -443,13 +487,12 @@
             this.guna2Button9.FillColor = System.Drawing.Color.Silver;
             this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button9.ForeColor = System.Drawing.Color.White;
-            this.guna2Button9.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button9.Image")));
-            this.guna2Button9.Location = new System.Drawing.Point(382, 514);
+            this.guna2Button9.Location = new System.Drawing.Point(349, 514);
             this.guna2Button9.Name = "guna2Button9";
             this.guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges17;
             this.guna2Button9.Size = new System.Drawing.Size(126, 31);
             this.guna2Button9.TabIndex = 25;
-            this.guna2Button9.Text = "Cancel";
+            this.guna2Button9.Text = "Xóa";
             // 
             // guna2Button10
             // 
@@ -461,13 +504,12 @@
             this.guna2Button10.FillColor = System.Drawing.Color.Silver;
             this.guna2Button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button10.ForeColor = System.Drawing.Color.White;
-            this.guna2Button10.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button10.Image")));
-            this.guna2Button10.Location = new System.Drawing.Point(571, 514);
+            this.guna2Button10.Location = new System.Drawing.Point(703, 514);
             this.guna2Button10.Name = "guna2Button10";
             this.guna2Button10.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            this.guna2Button10.Size = new System.Drawing.Size(137, 31);
+            this.guna2Button10.Size = new System.Drawing.Size(214, 31);
             this.guna2Button10.TabIndex = 26;
-            this.guna2Button10.Text = "Edit";
+            this.guna2Button10.Text = "Kiểm Tra Phòng Đã Đặt";
             // 
             // dataGridView1
             // 
@@ -482,7 +524,7 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(164, 577);
+            this.dataGridView2.Location = new System.Drawing.Point(167, 577);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
             this.dataGridView2.Size = new System.Drawing.Size(750, 119);
@@ -508,8 +550,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Silver;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(764, 514);
+            this.guna2Button1.Location = new System.Drawing.Point(520, 514);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges21;
             this.guna2Button1.Size = new System.Drawing.Size(137, 31);
@@ -641,5 +682,9 @@
         private TextBox textBox6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
         private TextBox textBox5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
+        private TextBox textBox7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
+        private TextBox textBox8;
     }
 }

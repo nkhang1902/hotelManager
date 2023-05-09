@@ -20,6 +20,24 @@ namespace PTTK_GIaoDien
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
+            Connection.Connect();
+            if (guna2ComboBox1.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn loại phòng cần tìm");
+            }
+            else
+            {
+                //insert DatPhong ( MaPhong, CMND, NgayDP, SoDemLuuTru,MaDoan, SoLuongNguoi) values ( '103', '0987', 350000,CONVERT(DATE,'27-04-2002' ,105), (SELECT DATEDIFF(day, '2023/07/02', '2023/05/09') AS difference),'2',6);
+                
+                string sql = "insert DatPhong ( MaPhong, CMND, NgayDP, SoDemLuuTru,MaDoan, SoLuongNguoi, TienCoc) values ( '" + textBox1.Text + "', '" + textBox7.Text + "', CONVERT(DATE, '" + guna2DateTimePicker1.Text + "', 120), " + "(SELECT DATEDIFF(day, '"+ guna2DateTimePicker1.Text +"' , '" + guna2DateTimePicker2.Text + "') AS difference)," +"'" + textBox8.Text +"'," + textBox6.Text + ", (SELECT " + textBox4.Text +"*"+ " (SELECT DATEDIFF(day, '" + guna2DateTimePicker1.Text + "' , '" + guna2DateTimePicker2.Text + "') AS difference)" + " * (0.5) AS result) );";
+                MessageBox.Show(sql);
+                Connection.RunSQL(sql);
+                sql = "UPDATE Phong SET TrangThaiDat = 1 WHERE MaPhong = " + textBox1.Text + ";";
+                Connection.RunSQL(sql);
+                dataGridView1.DataSource = Connection.GetDataToTable("select * from Phong where TrangThaiDat = '0'");
+                MessageBox.Show(sql);
+            }
+
 
         }
 
@@ -65,6 +83,11 @@ namespace PTTK_GIaoDien
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
