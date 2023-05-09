@@ -271,3 +271,16 @@ add
 	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (103,'Vip',4,'0','129.99','0');
 	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (302,'Thuong',4,'0','129.99','0');
 	INSERT INTO KhachDat(CMND,MaPhongDat,KhungGio) VALUES ('43258671', 102, '2002-02-19');
+	
+	--Linh
+	insert into KhachHang 
+	values(1111111111,'Nguyen Van A','TP HCM', 'NguyenVanA@gmail.com','11-12-2002','0937123456','87654321',Null)
+	insert into KhachHang 
+	values(1234567891,'Nguyen Van B','HA NOI', 'NguyenVanB@gmail.com','12-5-2002','0909999999','87123456',Null)
+	insert into KhachHang 
+	values(2222222222,'Nguyen Van C','DA NANG', 'NguyenVanC@gmail.com','5-3-2002','0909876543','87111111',Null)
+	
+	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )
+	values('Doan 2','1111111111', 20)
+	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )
+	values('Doan 3','2222222222', 10)
