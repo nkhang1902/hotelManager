@@ -265,35 +265,23 @@ add
 
     constraint fk_KhachDat_Phong
     FOREIGN key (MaPhongDat) REFERENCES Phong(MaPhong);
+	
+	INSERT INTO KhachHang VALUES (3333333333, 'Bao Khanh','TPHCM', 'bkhanh@gmail.com','01-01-2002', '093233123',null,null);
+	INSERT INTO KhachHang VALUES (4444444445, 'Nhat Khang','TPHCM', 'nkhang@gmail.com','10-01-2002', '037819202',null,null);
+	INSERT INTO KhachHang VALUES (9999999999, 'Minh Nhat','TP HCM', 'mnhat@gmail.com', '12-01-2002','0999999999','1212121212',null);
+	INSERT INTO KhachHang VALUES (8888888888, 'Chi Linh','TP HCM', 'clinh@gmail.com', '02-02-2002', '0378888888','123456778',null);
+	INSERT INTO  KhachHang VALUES(1111111111,'Nguyen Van A','TP HCM', 'NguyenVanA@gmail.com','11-12-2002','0937123456','87654321',Null)
+	INSERT INTO  KhachHang VALUES(1234567891,'Nguyen Van B','HA NOI', 'NguyenVanB@gmail.com','12-5-2002','0909999999','87123456',Null)
+	INSERT INTO  KhachHang VALUES(2222222222,'Nguyen Van C','DA NANG', 'NguyenVanC@gmail.com','5-3-2002','0909876543','87111111',Null)
 
-	INSERT INTO KhachHang(CMND, HoTenKH, EmailKH, SdtKH) VALUES ('43258671', 'Bao Khanh', 'bkhanh@gmail.com', '093233123');
-	INSERT INTO KhachHang(CMND, HoTenKH, EmailKH, SdtKH) VALUES ('12345678', 'Nhat Khang', 'nkhang@gmail.com', '037819202');
-	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (103,'Vip',4,'0','129.99','0');
-	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (302,'Thuong',4,'0','129.99','0');
-	INSERT INTO KhachDat(CMND,MaPhongDat,KhungGio) VALUES ('43258671', 102, '2002-02-19');
-	
-	--Linh
-	insert into KhachHang 
-	values(1111111111,'Nguyen Van A','TP HCM', 'NguyenVanA@gmail.com','11-12-2002','0937123456','87654321',Null)
-	insert into KhachHang 
-	values(1234567891,'Nguyen Van B','HA NOI', 'NguyenVanB@gmail.com','12-5-2002','0909999999','87123456',Null)
-	insert into KhachHang 
-	values(2222222222,'Nguyen Van C','DA NANG', 'NguyenVanC@gmail.com','5-3-2002','0909876543','87111111',Null)
-	
-	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )
-	values('Doan 2','1111111111', 20)
-	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )
-	values('Doan 3','2222222222', 10)
-	
-	
-	
-	--Minh Nhat
+	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )	values('Doan 2','1111111111', 20)
+	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )	values('Doan 3','2222222222', 10)
+	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )	values('Doan 4','3333333333', 15)
+
 	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (103,'Vip',4,'0','129.99','0');
 	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (302,'Thuong',4,'0','129.99','0');
 	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (201,'Vip',4,'0','500','0');
 	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (202,'Thuong',4,'0','100','0');
-	INSERT INTO KhachHang(CMND, HoTenKH, EmailKH, SdtKH) VALUES ('9999999999', 'Minh Nhat', 'mnhat@gmail.com', '0999999999');
-	INSERT INTO KhachHang(CMND, HoTenKH, EmailKH, SdtKH) VALUES ('8888888888', 'Chi Linh', 'clinh@gmail.com', '0378888888');
 
 	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (1,0,'Bar',50,5,'di bar free')
 	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (2,0,'Goft',100,10,'choi golf')
@@ -303,13 +291,11 @@ add
 	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (6,1,'Du thuyen',500,0,'Thue du thuyen 5h')
 	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (7,1,'Tham quan nui',100,0,'Leo nui')
 	
-
 	insert into DVPhong(MaPhong,MaDV) values(201,1)
 	insert into DVPhong(MaPhong,MaDV) values(201,2)
 	insert into DVPhong(MaPhong,MaDV) values(201,3)
 	insert into DVPhong(MaPhong,MaDV) values(302,1)
 	
-
 
 	SET IDENTITY_INSERT NhanVien ON
 	insert into NhanVien(MaNV,Loai,HoTenNV,DiaChiNV,EmailNV,SdtNV) values(1,1,'ABC','123 Nguyen Van Cu, HCM','abc@gmail.com','3824872384')
@@ -322,6 +308,10 @@ add
 	insert into DatPhong(MaDP,MaPhong,CMND,MaNV, BaoGia,NgayDP,SoDemLuuTru,YeuCauDatBiet,MaDoan,SoLuongNguoi,TienCoc) values (2,302,'8888888888',1,260,'2022-11-30',2,null,null,1,100)
 
 	SET IDENTITY_INSERT DatPhong OFF
+	
+	UPDATE KhachHang SET MaDoan=2 WHERE CMND='2222222222'
+	UPDATE KhachHang SET MaDoan=3 WHERE CMND='3333333333'
+	UPDATE KhachHang SET MaDoan=3 WHERE CMND='9999999999'
 	
 	
 	--function create ma phieu check in va phieu dang ky dich vu
