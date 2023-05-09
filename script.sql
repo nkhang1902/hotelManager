@@ -284,3 +284,41 @@ add
 	values('Doan 2','1111111111', 20)
 	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )
 	values('Doan 3','2222222222', 10)
+	
+	
+	
+	--Minh Nhat
+	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (103,'Vip',4,'0','129.99','0');
+	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (302,'Thuong',4,'0','129.99','0');
+	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (201,'Vip',4,'0','500','0');
+	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (202,'Thuong',4,'0','100','0');
+	INSERT INTO KhachHang(CMND, HoTenKH, EmailKH, SdtKH) VALUES ('9999999999', 'Minh Nhat', 'mnhat@gmail.com', '0999999999');
+	INSERT INTO KhachHang(CMND, HoTenKH, EmailKH, SdtKH) VALUES ('8888888888', 'Chi Linh', 'clinh@gmail.com', '0378888888');
+
+	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (1,0,'Bar',50,5,'di bar free')
+	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (2,0,'Goft',100,10,'choi golf')
+	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (3,0,'Bowling',50,5,'choi bowling')
+	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (4,1,'Nhay du',200,0,'Nhay du tren cao')
+	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (5,1,'Dua xe',100,5,'Dua xe dien')
+	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (6,1,'Du thuyen',500,0,'Thue du thuyen 5h')
+	insert into DichVu(MaDV, LoaiDV, TenDichVu, GiaDV, KhuyenMai, MoTa) values (7,1,'Tham quan nui',100,0,'Leo nui')
+	
+
+	insert into DVPhong(MaPhong,MaDV) values(201,1)
+	insert into DVPhong(MaPhong,MaDV) values(201,2)
+	insert into DVPhong(MaPhong,MaDV) values(201,3)
+
+	
+
+
+	SET IDENTITY_INSERT NhanVien ON
+	insert into NhanVien(MaNV,Loai,HoTenNV,DiaChiNV,EmailNV,SdtNV) values(1,1,'ABC','123 Nguyen Van Cu, HCM','abc@gmail.com','3824872384')
+	insert into NhanVien(MaNV,Loai,HoTenNV,DiaChiNV,EmailNV,SdtNV) values(2,2,'DEF','456 Nguyen Trai, HCM',null,null)
+	insert into NhanVien(MaNV,Loai,HoTenNV,DiaChiNV,EmailNV,SdtNV) values(3,1,'GHI','123 CMT8, HCM',null,null)
+	SET IDENTITY_INSERT NhanVien OFF
+	
+	SET IDENTITY_INSERT DatPhong ON
+	insert into DatPhong(MaDP,MaPhong,CMND,MaNV, BaoGia,NgayDP,SoDemLuuTru,YeuCauDatBiet,MaDoan,SoLuongNguoi,TienCoc) values (1,201,'9999999999',1,1500,null,3,null,null,1,200)
+	insert into DatPhong(MaDP,MaPhong,CMND,MaNV, BaoGia,NgayDP,SoDemLuuTru,YeuCauDatBiet,MaDoan,SoLuongNguoi,TienCoc) values (2,302,'8888888888',1,260,'2022-11-30',2,null,null,1,100)
+
+	SET IDENTITY_INSERT DatPhong OFF
