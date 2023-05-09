@@ -32,7 +32,7 @@ namespace PTTK_GIaoDien
             }
             else
             {
-                string sql = " select * from Phong where TenPhong = '" + guna2ComboBox1.Text + "'";
+                string sql = " select * from Phong where LoaiPhong = '" + guna2ComboBox1.Text + "'";
                 string check = Connection.GetFieldValues(sql);
                 if (check == "")
                 {
@@ -57,10 +57,16 @@ namespace PTTK_GIaoDien
 
             i = dataGridView1.CurrentRow.Index;
             textBox1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString(); // mã ID
+            textBox2.Text = dataGridView1.Rows[i].Cells[1].Value.ToString(); // LoaiPhong
+            textBox3.Text = dataGridView1.Rows[i].Cells[2].Value.ToString(); // TrangThaiDat
+            textBox4.Text = dataGridView1.Rows[i].Cells[3].Value.ToString(); // Trạng thái vệ sinh
+            textBox5.Text = dataGridView1.Rows[i].Cells[4].Value.ToString(); // Giá
+            textBox6.Text = dataGridView1.Rows[i].Cells[5].Value.ToString(); // Số lượng người
+        }
 
-            textBox3.Text = dataGridView1.Rows[i].Cells[1].Value.ToString(); // TenPhong
-            textBox4.Text = dataGridView1.Rows[i].Cells[2].Value.ToString(); // LoaiPhong
-            textBox2.Text = dataGridView1.Rows[i].Cells[4].Value.ToString(); // Giá
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

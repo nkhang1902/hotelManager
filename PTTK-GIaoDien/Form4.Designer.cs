@@ -56,6 +56,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -110,6 +114,10 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel17);
+            this.guna2GradientPanel1.Controls.Add(this.textBox6);
+            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel16);
+            this.guna2GradientPanel1.Controls.Add(this.textBox5);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel15);
             this.guna2GradientPanel1.Controls.Add(this.textBox2);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel14);
@@ -134,11 +142,46 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(753, 159);
             this.guna2GradientPanel1.TabIndex = 20;
             // 
+            // guna2HtmlLabel17
+            // 
+            this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.Gray;
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(213, 137);
+            this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
+            this.guna2HtmlLabel17.Size = new System.Drawing.Size(84, 17);
+            this.guna2HtmlLabel17.TabIndex = 47;
+            this.guna2HtmlLabel17.Text = "Số lượng người";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(303, 133);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 23);
+            this.textBox6.TabIndex = 48;
+            // 
+            // guna2HtmlLabel16
+            // 
+            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.Gray;
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(3, 134);
+            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
+            this.guna2HtmlLabel16.Size = new System.Drawing.Size(96, 17);
+            this.guna2HtmlLabel16.TabIndex = 45;
+            this.guna2HtmlLabel16.Text = "Trạng thái vệ sinh";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(99, 133);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 23);
+            this.textBox5.TabIndex = 46;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
             // guna2HtmlLabel15
             // 
             this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(528, 106);
+            this.guna2HtmlLabel15.Location = new System.Drawing.Point(605, 100);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
             this.guna2HtmlLabel15.Size = new System.Drawing.Size(20, 17);
             this.guna2HtmlLabel15.TabIndex = 43;
@@ -146,7 +189,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(597, 106);
+            this.textBox2.Location = new System.Drawing.Point(303, 100);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 23);
             this.textBox2.TabIndex = 44;
@@ -155,15 +198,15 @@
             // 
             this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel14.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(323, 105);
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(417, 99);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(52, 17);
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(76, 17);
             this.guna2HtmlLabel14.TabIndex = 41;
-            this.guna2HtmlLabel14.Text = "Số Người";
+            this.guna2HtmlLabel14.Text = "Trạng thái đặt";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(392, 106);
+            this.textBox4.Location = new System.Drawing.Point(647, 100);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 23);
             this.textBox4.TabIndex = 42;
@@ -172,15 +215,15 @@
             // 
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(137, 105);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(214, 99);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(60, 17);
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(63, 17);
             this.guna2HtmlLabel13.TabIndex = 39;
-            this.guna2HtmlLabel13.Text = "Tên Phòng";
+            this.guna2HtmlLabel13.Text = "Loại Phòng";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(201, 106);
+            this.textBox3.Location = new System.Drawing.Point(499, 99);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 23);
             this.textBox3.TabIndex = 40;
@@ -189,15 +232,15 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(2, 105);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(3, 100);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(14, 17);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(58, 17);
             this.guna2HtmlLabel6.TabIndex = 35;
-            this.guna2HtmlLabel6.Text = "ID";
+            this.guna2HtmlLabel6.Text = "Mã Phòng";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 105);
+            this.textBox1.Location = new System.Drawing.Point(99, 99);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 36;
@@ -528,7 +571,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 705);
+            this.ClientSize = new System.Drawing.Size(991, 705);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.guna2HtmlLabel8);
@@ -594,5 +637,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
         private TextBox textBox2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
+        private TextBox textBox6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
+        private TextBox textBox5;
     }
 }
