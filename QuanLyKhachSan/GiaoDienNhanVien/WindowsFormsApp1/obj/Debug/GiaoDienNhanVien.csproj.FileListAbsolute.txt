@@ -1,0 +1,27 @@
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\GiaoDienNhanVien.csproj.AssemblyReference.cache
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\GiaoDienNhanVien.csproj.SuggestedBindingRedirects.cache
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.QuanLyDatPhong.resources
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.QuanLyPhong.resources
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\GiaoDienNhanVien.csproj.GenerateResource.cache
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\GiaoDienNhanVien.csproj.CoreCompileInputs.cache
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\BAC TOC\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\GiaoDienNhanVien.csproj.AssemblyReference.cache
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.QuanLyDatPhong.resources
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.QuanLyPhong.resources
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\GiaoDienNhanVien.csproj.GenerateResource.cache
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\GiaoDienNhanVien.csproj.CoreCompileInputs.cache
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\QuanLyKhachHang.QuanLyKH.resources
+D:\1PTTK\QuanLyKhachSan\GiaoDienNhanVien\WindowsFormsApp1\obj\Debug\QuanLyKhachHang.ChinhSuaThongTin.resources
