@@ -34,9 +34,7 @@ create table NhanVien(
     constraint pk_nhanvien
     primary key (MaNV)
 );
-	insert into NhanVien values(1,1,'Tran Van D','123 Nguyen Van Cu, HCM','abc@gmail.com','3824872384')
-	insert into NhanVien values(2,2,'Le Van E','456 Nguyen Trai, HCM',null,null)
-	insert into NhanVien values(3,1,'Nguyen Thi F','123 CMT8, HCM',null,null)
+	
 create table Phong(
     MaPhong INT,
     LoaiPhong CHAR(10),
@@ -269,6 +267,10 @@ add
 	INSERT INTO KhachHang VALUES(1234567890,'Nguyen Van A','TP HCM', 'NguyenVanA@gmail.com','11-12-2002','0937123456','87654321',Null)
 	INSERT INTO KhachHang VALUES(1234567891,'Nguyen Van B','HA NOI', 'NguyenVanB@gmail.com','12-5-2002','0909999999','87123456',Null)
 	INSERT INTO KhachHang VALUES(1234567892,'Nguyen Van C','DA NANG', 'NguyenVanC@gmail.com','5-3-2002','0909876543','87111111',Null)
+
+	insert into NhanVien values(1,1,'Tran Van D','123 Nguyen Van Cu, HCM','abc@gmail.com','3824872384')
+	insert into NhanVien values(2,2,'Le Van E','456 Nguyen Trai, HCM',null,null)
+	insert into NhanVien values(3,1,'Nguyen Thi F','123 CMT8, HCM',null,null)
 
 	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )	values('Doan 2','1111111111', 20)
 	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )	values('Doan 3','2222222222', 10)
