@@ -1,4 +1,4 @@
-﻿create database QLKhachSan;	
+create database QLKhachSan;	
 use QLKhachSan;
 create table KhachHang(
     CMND varchar(10),
@@ -17,14 +17,15 @@ create table KhachHang(
 create table KhachDat(
     CMND varchar(10),
     MaPhongDat INT,
-    KhungGio date,
+    NgayDat date,
+	NgayTra date,
 
     constraint pk_khachdat
-    primary key (CMND,MaPhongDat,KhungGio)
+    primary key (CMND,MaPhongDat,NgayDat)
 );
 
 create table NhanVien(
-    MaNV INT IDENTITY(1,1),
+    MaNV INT,
     Loai int,
     HoTenNV nvarchar(30),
 	DiaChiNV nvarchar(50),
@@ -32,9 +33,10 @@ create table NhanVien(
 	SdtNV char(10),
     constraint pk_nhanvien
     primary key (MaNV)
-
 );
-
+	insert into NhanVien values(1,1,'Tran Van D','123 Nguyen Van Cu, HCM','abc@gmail.com','3824872384')
+	insert into NhanVien values(2,2,'Le Van E','456 Nguyen Trai, HCM',null,null)
+	insert into NhanVien values(3,1,'Nguyen Thi F','123 CMT8, HCM',null,null)
 create table Phong(
     MaPhong INT,
     LoaiPhong CHAR(10),
@@ -142,11 +144,8 @@ create table DatPhong (
     MaDP INT IDENTITY(1,1),
     MaPhong INT,
     CMND varchar(10),
-	MaNV INT,
-	BaoGia int,
     NgayDP date,
     SoDemLuuTru int,
-    YeuCauDatBiet nvarchar(100),
     MaDoan INT,
     SoLuongNguoi int,
     TienCoc int,
@@ -235,9 +234,6 @@ add
     constraint fk_chitietdichvudangky_khachhang
     FOREIGN key (CMND) REFERENCES KhachHang(CMND),
 
-    constraint fk_chitietdichvudangky_nhanvien
-    FOREIGN key (MaNV) REFERENCES NhanVien(MaNV),
-
     constraint fk_chitietdichvudangky_doan
     FOREIGN key (MaDoan) REFERENCES Doan(MaDoan);
 
@@ -266,17 +262,17 @@ add
     constraint fk_KhachDat_Phong
     FOREIGN key (MaPhongDat) REFERENCES Phong(MaPhong);
 	
-	INSERT INTO KhachHang VALUES (3333333333, 'Bao Khanh','TPHCM', 'bkhanh@gmail.com','01-01-2002', '093233123',null,null);
-	INSERT INTO KhachHang VALUES (4444444445, 'Nhat Khang','TPHCM', 'nkhang@gmail.com','10-01-2002', '037819202',null,null);
+	INSERT INTO KhachHang VALUES (1111111111, 'Bao Khanh','TPHCM', 'bkhanh@gmail.com','01-01-2002', '093233123',null,null);
+	INSERT INTO KhachHang VALUES (2222222222, 'Nhat Khang','TPHCM', 'nkhang@gmail.com','10-01-2002', '037819202',null,null);
 	INSERT INTO KhachHang VALUES (9999999999, 'Minh Nhat','TP HCM', 'mnhat@gmail.com', '12-01-2002','0999999999','1212121212',null);
 	INSERT INTO KhachHang VALUES (8888888888, 'Chi Linh','TP HCM', 'clinh@gmail.com', '02-02-2002', '0378888888','123456778',null);
-	INSERT INTO  KhachHang VALUES(1111111111,'Nguyen Van A','TP HCM', 'NguyenVanA@gmail.com','11-12-2002','0937123456','87654321',Null)
-	INSERT INTO  KhachHang VALUES(1234567891,'Nguyen Van B','HA NOI', 'NguyenVanB@gmail.com','12-5-2002','0909999999','87123456',Null)
-	INSERT INTO  KhachHang VALUES(2222222222,'Nguyen Van C','DA NANG', 'NguyenVanC@gmail.com','5-3-2002','0909876543','87111111',Null)
+	INSERT INTO KhachHang VALUES(1234567890,'Nguyen Van A','TP HCM', 'NguyenVanA@gmail.com','11-12-2002','0937123456','87654321',Null)
+	INSERT INTO KhachHang VALUES(1234567891,'Nguyen Van B','HA NOI', 'NguyenVanB@gmail.com','12-5-2002','0909999999','87123456',Null)
+	INSERT INTO KhachHang VALUES(1234567892,'Nguyen Van C','DA NANG', 'NguyenVanC@gmail.com','5-3-2002','0909876543','87111111',Null)
 
 	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )	values('Doan 2','1111111111', 20)
 	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )	values('Doan 3','2222222222', 10)
-	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )	values('Doan 4','3333333333', 15)
+	insert into Doan (TenDoan ,NguoiDaiDien ,SoLuong )	values('Doan 4','9999999999', 15)
 
 	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (103,'Vip',4,'0','129.99','0');
 	INSERT INTO Phong(MaPhong,LoaiPhong, SoLuongNguoi, TrangThaiDat, GiaPhong, TrangThaiVS) VALUES (302,'Thuong',4,'0','129.99','0');
@@ -296,40 +292,30 @@ add
 	insert into DVPhong(MaPhong,MaDV) values(201,3)
 	insert into DVPhong(MaPhong,MaDV) values(302,1)
 	
-
-	SET IDENTITY_INSERT NhanVien ON
-	insert into NhanVien(MaNV,Loai,HoTenNV,DiaChiNV,EmailNV,SdtNV) values(1,1,'ABC','123 Nguyen Van Cu, HCM','abc@gmail.com','3824872384')
-	insert into NhanVien(MaNV,Loai,HoTenNV,DiaChiNV,EmailNV,SdtNV) values(2,2,'DEF','456 Nguyen Trai, HCM',null,null)
-	insert into NhanVien(MaNV,Loai,HoTenNV,DiaChiNV,EmailNV,SdtNV) values(3,1,'GHI','123 CMT8, HCM',null,null)
-	SET IDENTITY_INSERT NhanVien OFF
-	
-	SET IDENTITY_INSERT DatPhong ON
-	insert into DatPhong(MaDP,MaPhong,CMND,MaNV, BaoGia,NgayDP,SoDemLuuTru,YeuCauDatBiet,MaDoan,SoLuongNguoi,TienCoc) values (1,201,'9999999999',1,1500,null,3,null,null,1,200)
-	insert into DatPhong(MaDP,MaPhong,CMND,MaNV, BaoGia,NgayDP,SoDemLuuTru,YeuCauDatBiet,MaDoan,SoLuongNguoi,TienCoc) values (2,302,'8888888888',1,260,'2022-11-30',2,null,null,1,100)
-
-	SET IDENTITY_INSERT DatPhong OFF
+	insert into DatPhong(MaPhong,CMND,NgayDP,SoDemLuuTru,MaDoan,SoLuongNguoi,TienCoc) values (201,'9999999999',null,3,null,1,200)
+	insert into DatPhong(MaPhong,CMND,NgayDP,SoDemLuuTru,MaDoan,SoLuongNguoi,TienCoc) values (302,'8888888888','2022-11-30',2,null,1,100)
+	insert into DatPhong(MaPhong,CMND,NgayDP,SoDemLuuTru,MaDoan,SoLuongNguoi,TienCoc) values (302,'1111111111','2022-11-30',2,null,1,100)
 	
 	UPDATE KhachHang SET MaDoan=2 WHERE CMND='2222222222'
-	UPDATE KhachHang SET MaDoan=3 WHERE CMND='3333333333'
+	UPDATE KhachHang SET MaDoan=3 WHERE CMND='1111111111'
 	UPDATE KhachHang SET MaDoan=3 WHERE CMND='9999999999'
 	
-	
 	--function create ma phieu check in va phieu dang ky dich vu
-	CREATE FUNCTION dbo.TaoMaPDKCheckIn()
-RETURNS INT
-AS
-BEGIN
-    DECLARE @maxID INT
-    SELECT @maxID = MAX(MAPDKC) FROM PhieuDangKyCheckIn
-    RETURN ISNULL(@maxID, 0) + 1
-END
+CREATE FUNCTION TaoMaPDKCheckIn()
+	RETURNS INT
+	AS
+	BEGIN
+		DECLARE @maxID INT
+		SELECT @maxID = MAX(MAPDKC) FROM PhieuDangKyCheckIn
+		RETURN ISNULL(@maxID, 0) + 1
+	END
 
 
-CREATE FUNCTION dbo.TaoMaPDKDichVu()
-RETURNS INT
-AS
-BEGIN
-    DECLARE @maxID INT
-    SELECT @maxID = MAX(MAPDKDV) FROM PhieuDangKyDichVu
-    RETURN ISNULL(@maxID, 0) + 1
-END
+CREATE FUNCTION TaoMaPDKDichVu()
+	RETURNS INT
+	AS
+	BEGIN
+		DECLARE @maxID INT
+		SELECT @maxID = MAX(MAPDKDV) FROM PhieuDangKyDichVu
+		RETURN ISNULL(@maxID, 0) + 1
+	END
