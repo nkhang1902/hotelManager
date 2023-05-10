@@ -13,6 +13,7 @@ namespace PTTK_GIaoDien
 {
     public partial class Form4 : Form
     {
+
         public Form4()
         {
             InitializeComponent();
@@ -28,14 +29,61 @@ namespace PTTK_GIaoDien
             else
             {
                 //insert DatPhong ( MaPhong, CMND, NgayDP, SoDemLuuTru,MaDoan, SoLuongNguoi) values ( '103', '0987', 350000,CONVERT(DATE,'27-04-2002' ,105), (SELECT DATEDIFF(day, '2023/07/02', '2023/05/09') AS difference),'2',6);
-                
-                string sql = "insert DatPhong ( MaPhong, CMND, NgayDP, SoDemLuuTru,MaDoan, SoLuongNguoi, TienCoc) values ( '" + textBox1.Text + "', '" + textBox7.Text + "', CONVERT(DATE, '" + guna2DateTimePicker1.Text + "', 120), " + "(SELECT DATEDIFF(day, '"+ guna2DateTimePicker1.Text +"' , '" + guna2DateTimePicker2.Text + "') AS difference)," +"'" + textBox8.Text +"'," + textBox6.Text + ", (SELECT " + textBox4.Text +"*"+ " (SELECT DATEDIFF(day, '" + guna2DateTimePicker1.Text + "' , '" + guna2DateTimePicker2.Text + "') AS difference)" + " * (0.5) AS result) );";
-                MessageBox.Show(sql);
-                Connection.RunSQL(sql);
-                sql = "UPDATE Phong SET TrangThaiDat = 1 WHERE MaPhong = " + textBox1.Text + ";";
-                Connection.RunSQL(sql);
-                dataGridView1.DataSource = Connection.GetDataToTable("select * from Phong where TrangThaiDat = '0'");
-                MessageBox.Show(sql);
+                string result_MaDoan = Connection.GetFieldValues("select * from Doan where MaDoan = " + textBox8.Text);
+                if (result_MaDoan == "")
+                {
+                    try
+                    {
+                        string sql = "insert DatPhong ( MaPhong, CMND, NgayDP, SoDemLuuTru, MaDoan, SoLuongNguoi, TienCoc) values ( '" + textBox1.Text + "', '" + textBox7.Text + "', CONVERT(DATE, '" + guna2DateTimePicker1.Text + "', 120), " + "(SELECT DATEDIFF(day, '" + guna2DateTimePicker1.Text + "' , '" + guna2DateTimePicker2.Text + "') AS difference)," + "'" + textBox8.Text + "'," + textBox6.Text + ", (SELECT " + textBox4.Text + "*" + " (SELECT DATEDIFF(day, '" + guna2DateTimePicker1.Text + "' , '" + guna2DateTimePicker2.Text + "') AS difference)" + " * (0.5) AS result) );";
+                        MessageBox.Show(sql);
+                        Connection.RunSQL(sql);
+                        sql = "select * from DatPhong where CMND = " + textBox7.Text + " ";
+                        if (Connection.GetFieldValues(sql) != "")
+                        {
+                            sql = "UPDATE Phong SET TrangThaiDat = 1 WHERE MaPhong = " + textBox1.Text + ";";
+                            Connection.RunSQL(sql);
+                            dataGridView1.DataSource = Connection.GetDataToTable("select * from Phong where TrangThaiDat = '0'");
+                            MessageBox.Show(sql);
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Thêm dữ liệu không thành công ");
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Vui lòng điền CMND vào ");
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        string sql = "insert DatPhong ( MaPhong, CMND,MaDoan, NgayDP, SoDemLuuTru,MaDoan, SoLuongNguoi, TienCoc) values ( '" + textBox1.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "' , CONVERT(DATE, '" + guna2DateTimePicker1.Text + "', 120), " + "(SELECT DATEDIFF(day, '" + guna2DateTimePicker1.Text + "' , '" + guna2DateTimePicker2.Text + "') AS difference)," + "'" + textBox8.Text + "'," + textBox6.Text + ", (SELECT " + textBox4.Text + "*" + " (SELECT DATEDIFF(day, '" + guna2DateTimePicker1.Text + "' , '" + guna2DateTimePicker2.Text + "') AS difference)" + " * (0.5) AS result) );";
+                        MessageBox.Show(sql);
+                        Connection.RunSQL(sql);
+                        sql = "select * from DatPhong where CMND = " + textBox7.Text + " ";
+                        if (Connection.GetFieldValues(sql) != "")
+                        {
+                            sql = "UPDATE Phong SET TrangThaiDat = 1 WHERE MaPhong = " + textBox1.Text + ";";
+                            Connection.RunSQL(sql);
+                            dataGridView1.DataSource = Connection.GetDataToTable("select * from Phong where TrangThaiDat = '0'");
+                            MessageBox.Show(sql);
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Thêm dữ liệu không thành công ");
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Vui lòng điền CMND vào ");
+                    }
+                }
+
+
             }
 
 
@@ -50,18 +98,28 @@ namespace PTTK_GIaoDien
             }
             else
             {
-                string sql = " select * from Phong where LoaiPhong = '" + guna2ComboBox1.Text + "' and TrangThaiDat ='0'";
-                string check = Connection.GetFieldValues(sql);
-                if (check == "")
+                if (guna2NumericUpDown1.Value == 0)
                 {
-                    MessageBox.Show("Loại phòng này đã hết");
+                    MessageBox.Show("Vui lòng nhập số lượng người vào");
                 }
-                else dataGridView1.DataSource = Connection.GetDataToTable(sql);
-            }
-           
-            
+                else
+                {
+                    string sql = " select * from Phong where LoaiPhong = '" + guna2ComboBox1.Text + "' and SoLuongNguoi <= " + guna2NumericUpDown1.Value +" and TrangThaiDat = '0'";
+                    string check = Connection.GetFieldValues(sql);
+                    MessageBox.Show(sql);
+                    if (check == "")
+                    {
+                        MessageBox.Show("Loại phòng này đã hết");
+                    }
+                    else dataGridView1.DataSource = Connection.GetDataToTable(sql);
 
-            
+                }
+            }
+
+
+
+
+
         }
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,14 +130,27 @@ namespace PTTK_GIaoDien
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
-
             i = dataGridView1.CurrentRow.Index;
-            textBox1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString(); // mã ID
+
+
+            //textBox1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString(); // mã ID
+            textBox1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+
             textBox2.Text = dataGridView1.Rows[i].Cells[1].Value.ToString(); // LoaiPhong
             textBox3.Text = dataGridView1.Rows[i].Cells[2].Value.ToString(); // TrangThaiDat
             textBox4.Text = dataGridView1.Rows[i].Cells[3].Value.ToString(); // Trạng thái vệ sinh
             textBox5.Text = dataGridView1.Rows[i].Cells[4].Value.ToString(); // Giá
-            textBox6.Text = dataGridView1.Rows[i].Cells[5].Value.ToString(); // Số lượng người
+            textBox6.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+
+
+
+
+            /*textBox1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString(); // mã ID
+            textBox2.Text = dataGridView1.Rows[i].Cells[1].Value.ToString(); // LoaiPhong
+            textBox3.Text = dataGridView1.Rows[i].Cells[2].Value.ToString(); // TrangThaiDat
+            textBox4.Text = dataGridView1.Rows[i].Cells[3].Value.ToString(); // Trạng thái vệ sinh
+            textBox5.Text = dataGridView1.Rows[i].Cells[4].Value.ToString(); // Giá
+            textBox6.Text = dataGridView1.Rows[i].Cells[5].Value.ToString(); // Số lượng người*/
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -94,19 +165,27 @@ namespace PTTK_GIaoDien
 
         private void guna2Button10_Click(object sender, EventArgs e)
         {
-            if(textBox7.Text =="")
+            if (textBox7.Text == "")
             {
                 MessageBox.Show("Vui điền vào cmnd");
             }
             else
             {
-                Connection.Connect();
-                string sql = " select * from DatPhong where CMND = '" + textBox7.Text + "'";
-                dataGridView2.DataSource = Connection.GetDataToTable(sql);
-                Connection.Disconnect();
+                try
+                {
+                    Connection.Connect();
+                    string sql = " select * from DatPhong where CMND = '" + textBox7.Text + "'";
+                    dataGridView2.DataSource = Connection.GetDataToTable(sql);
+                    Connection.Disconnect();
+                }
+                catch
+                {
+
+                }
+               
             }
-                
-                
+
+
 
 
         }
@@ -116,23 +195,24 @@ namespace PTTK_GIaoDien
             int i;
 
             i = dataGridView2.CurrentRow.Index;
-            textBox9.Text = dataGridView2.Rows[i].Cells[0].Value.ToString(); // mã DatPhòng
+            //textBox9.Text = dataGridView2.Rows[i].Cells[0].Value.ToString(); // mã DatPhòng
         }
 
         private void guna2Button9_Click(object sender, EventArgs e)
         {
+
             Connection.Connect();
-            if (textBox7.Text == "")
-            {
-                MessageBox.Show("Vui điền vào mã hủy đặt phòng");
-            }
-            else {
-                string sql = "delete DatPhong where MADP = '" + textBox9.Text + "'";
+            try{
+                string sql = "delete DatPhong where MADP = '" + textBox1.Text + "'";
                 Connection.RunSQL(sql);
-                sql = "UPDATE Phong SET TrangThaiDat = 0 WHERE MaPhong = (select MaPhong from DatPhong where MaDP = '" + textBox9.Text + "'); ";
+                sql = "UPDATE Phong SET TrangThaiDat = 0 WHERE MaPhong = (select MaPhong from DatPhong where MaDP = '" + textBox1.Text + "'); ";
                 MessageBox.Show("Hủy đặt phòng thành công");
             }
-            
+
+            catch {
+                MessageBox.Show("Lỗi đặt phòng không thành công");
+            }
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
