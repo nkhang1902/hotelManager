@@ -23,12 +23,14 @@ namespace PTTK
             dataGridView3.Columns.Add("MaDV", "MaDV");
             dataGridView3.Columns.Add("TenDichVu", "TenDichVu");
             dataGridView3.Columns.Add("GiaDV", "GiaDV");
+            dataGridView3.Columns.Add("KhuyenMai", "KhuyenMai");
         }
 
         private void updateTotalPrice()
         {
             decimal totalPrice = 0;
-
+            decimal totalDiscount = 0;
+            decimal PhiTamThoi = 0;
             for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
             {
                 DataGridViewRow row = dataGridView3.Rows[i];
@@ -39,7 +41,17 @@ namespace PTTK
                 }
             }
 
-            textBox3.Text = totalPrice.ToString(); ;
+            for (int j = 0; j < dataGridView3.Rows.Count - 1; j++)
+            {
+                DataGridViewRow row = dataGridView3.Rows[j];
+                decimal discount;
+                if (decimal.TryParse(row.Cells["KhuyenMai"].Value.ToString(), out discount))
+                {
+                    totalDiscount += discount;
+                }
+            }
+            PhiTamThoi =totalPrice - totalDiscount;
+            textBox3.Text = PhiTamThoi.ToString(); ;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -161,7 +173,7 @@ namespace PTTK
                 newRow.Cells.Add(new DataGridViewTextBoxCell { Value = selectedRow.Cells["MaDV"].Value });
                 newRow.Cells.Add(new DataGridViewTextBoxCell { Value = selectedRow.Cells["TenDichVu"].Value });
                 newRow.Cells.Add(new DataGridViewTextBoxCell { Value = selectedRow.Cells["GiaDV"].Value });
-
+                newRow.Cells.Add(new DataGridViewTextBoxCell { Value = selectedRow.Cells["KhuyenMai"].Value });
                 // Add the new row to the cart data grid view
                 dataGridView3.Rows.Add(newRow);
             }
