@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -227,10 +227,10 @@ namespace PTTK
             try
             {
                 string connectionString = Program.exactly_server_name;
-                string query = "SET IDENTITY_INSERT PhieuDangKyDichVu ON " + 
-                    "DECLARE @newID INT "+ "SET @newID = dbo.TaoMaPDKDichVu() " +
+                string query = "SET IDENTITY_INSERT PhieuDangKyDichVu ON " +
+                    "DECLARE @newID INT " + "SET @newID = dbo.TaoMaPDKDichVu() " +
                     "insert into PhieuDangKyDichVu(MAPDKDV,CMND,MaNV,PhiTamThoi,NgayDangKy) values (@newID,'" + textBox5.Text + "','" + textBox4.Text + "','" + textBox3.Text + "','" + textBox2.Text + "') SET IDENTITY_INSERT PhieuDangKyDichVu OFF ";
-                string query2 ="DECLARE @newID INT " +
+                string query2 = "DECLARE @newID INT " +
                            "SET @newID = dbo.TaoMaPDKDichVu() - 1 "
                            + "INSERT INTO ChiTietDichVuDangKy (MAPDKDV, MaDV, GiaDV) VALUES (@newID, @MaDV, @GiaDV)";
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -263,7 +263,7 @@ namespace PTTK
                     }
                     conn.Close();
                 }
-                
+
                 MessageBox.Show($"Dang dich vu thanh cong.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
@@ -271,6 +271,11 @@ namespace PTTK
             {
                 MessageBox.Show($"Loi : {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
