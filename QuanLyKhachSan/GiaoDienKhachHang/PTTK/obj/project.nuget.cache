@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ajk5ZVcaA1Ak2iQrEjXo5Uf7GSVT04HhiomU4lRxvADSgtsnShwI9H420j4Lhl7057/8dx5VGH+q7Y37AfVd/A==",
+  "success": true,
+  "projectFilePath": "D:\\1PTTK\\QuanLyKhachSan\\GiaoDienKhachHang\\PTTK\\GiaoDienKhachHang.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ACER\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.4\\guna.ui2.winforms.2.0.4.4.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
